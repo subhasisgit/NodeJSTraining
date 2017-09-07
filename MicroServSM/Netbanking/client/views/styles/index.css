@@ -1,0 +1,57 @@
+section
+{
+    width: 50%;
+    margin-left: 25%;
+    font-family: "Comic Sans MS";
+}
+fieldset
+{
+    border: 2px solid lightseagreen;
+    font-family: "Comic Sans MS";
+    font-size: 70%;
+}
+
+legend
+{
+    text-align: center;
+    font-size: large;
+}
+
+input
+{
+    width: 40%;
+    margin-bottom: 2%;
+    font-family: "Comic Sans MS";
+}
+
+input[type="submit"]
+{
+    color: white;
+    background-color: blue;
+}
+
+table
+{
+    border: solid;
+    font-family: "Comic Sans MS";
+    font-size: 90%;
+    border-style: double;
+}
+
+tr:nth-child(2n+1)
+{
+    color: rebeccapurple;
+    background-color: aquamarine;
+}
+input[type="checkbox"]
+{
+    width: auto;
+
+}
+
+h1
+{
+    font-family: "Comic Sans MS";
+    font-size: 120%;
+    text-align: center;
+}

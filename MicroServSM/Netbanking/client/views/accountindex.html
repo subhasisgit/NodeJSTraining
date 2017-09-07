@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="../../node_modules/angular/angular.js">
+
+    </script>
+    <script type="text/javascript" src="../modules/usermodule.js"></script>
+    <script type="text/javascript" src="../modules/customermodule.js"></script>
+    <script type="text/javascript" src="../modules/accountsmodule.js"></script>
+
+    <script type="text/javascript" src="../services/userservice.js"></script>
+    <script type="text/javascript" src="../services/accountservice.js"></script>
+
+    <script type="text/javascript" src="../controllers/accountscontroller.js"></script>
+
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+<!--<h1>Account Update</h1>-->
+
+<section ng-app="AccountsApp" ng-controller="AccountsController">
+
+    <form ng-submit="save()">
+        <fieldset>
+            <legend>Accounts Form</legend>
+            Account No <input type="number" ng-model="accountObj.accountNo" placeholder="Account No"><br>
+
+            Account Type <select ng-model="accountObj.accountType" selected ng-change=""
+                    ng-options="obj for obj in accountTypes"></select><br><br>
+
+            Balance <input type="number" ng-model="accountObj.balance" placeholder="Balance"><br>
+
+            Customer ID <select ng-model="accountObj.customerRef" selected ng-change="">
+                <option ng-repeat="obj in customerColl"> {{obj.customerId}}---{{obj.name}}</option>
+            </select><br>
+
+            <input type="submit" value="Add Account">
+        </fieldset>
+    </form>
+    <!--<input type="checkbox" ng-init="checked=false" ng-model="checked" ng-change="changeStatus()">Show Customer Data-->
+    <div ng-if="checked">
+        <table>
+            <tr ng-repeat="user in userColl">
+                <td>{{user.customerId}}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.phoneNo}}</td>
+                <td>{{user.email}}</td>
+            </tr>
+        </table>
+    </div>
+
+</section>
+</body>
+</html>

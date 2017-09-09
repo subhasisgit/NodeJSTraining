@@ -1,0 +1,15 @@
+@CHARSET "ISO-8859-1";
+
+section
+{
+	width:80%;
+	border:2px solid blue;
+}
+
+
+
+p
+{
+	font-size: x-large;
+	color: blue;
+}

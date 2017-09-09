@@ -1,0 +1,5 @@
+package com.anz.travel.repo;
+
+public interface FlightRepository {
+
+}

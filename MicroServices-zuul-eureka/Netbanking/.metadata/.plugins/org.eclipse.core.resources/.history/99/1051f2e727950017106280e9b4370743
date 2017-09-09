@@ -1,0 +1,10 @@
+package com.anz.travel.models;
+
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collections="Flights")
+public class Flight {
+	
+	private
+
+}

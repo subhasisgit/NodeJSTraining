@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="styles/index.css">
+    <script type="text/javascript"  src="../../node_modules/angular/angular.js">
+
+    </script>
+    <script type="text/javascript" src="../modules/usermodule.js"></script>
+    <script type="text/javascript" src="../modules/customermodule.js"></script>
+    <script type="text/javascript" src="../modules/accountsmodule.js"></script>
+    <script type="text/javascript" src="../services/userservice.js"></script>
+    <script type="text/javascript" src="../controllers/accountscontroller.js"></script>
+</head>
+<body>
+<section ng-app="AccountsApp" ng-controller="AccountsController">
+
+
+    <form ng-submit="save()">
+        <fieldset>
+            <legend>Accounts Form</legend>
+            <label>Account No</label>
+            <input type="number" ng-model="accountsObj.accountNo"
+                   placeholder="Account No">
+            <label>Account Type</label>
+
+            <select  ng-model="accountsObj.accountType" selected >
+                <option>----Select Account Type-----</option>
+
+                <option ng-repeat="obj in accountTypes" value="{{obj}}" >{{obj}}</option>
+            </select>
+            <label>Balance</label>
+            <input type="number" ng-model="accountsObj.balance"
+                   placeholder="Balance">
+            <label>Customer Id</label>
+            <select  ng-model="accountsObj.customerRef" selected>
+                <option>----Select Customer-----</option>
+                <option ng-repeat="obj in customerColl" value="{{obj.customerId}}">{{obj.customerId}}---{{obj.name}}</option>
+            </select>
+            <input type="submit" value="submit">
+        </fieldset>
+
+    </form>
+    </section>
+</body>
+</html>

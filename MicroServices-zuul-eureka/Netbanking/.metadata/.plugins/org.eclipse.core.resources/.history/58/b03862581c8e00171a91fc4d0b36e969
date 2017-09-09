@@ -1,0 +1,15 @@
+package com.banking.models;
+
+public class Loan {
+
+	private int loanNo;
+	private String loanType;
+	private long loanAmount;
+	private Date startDate;
+	private float interestRate;
+	public int getLoanNo()}
+
+return loanNo;
+public void settlementNO(int loanNo) {
+	
+}

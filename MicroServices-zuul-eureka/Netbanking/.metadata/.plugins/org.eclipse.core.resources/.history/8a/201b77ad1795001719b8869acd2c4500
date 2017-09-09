@@ -1,0 +1,5 @@
+package com.anz.banking.controllers;
+
+public class HomeController {
+
+}

@@ -1,0 +1,61 @@
+section
+{
+    width:50%;
+    margin-left: 25%;
+
+}
+fieldset
+{
+    border: 2px solid red;
+}
+
+legend
+{
+    text-align: center;
+    font-size: large;
+}
+label
+{
+    width:40%;
+    margin-bottom: 2%;
+    margin-left: 10%;
+    margin-right: 4%;
+}
+input
+{
+    width:40%;
+    margin-bottom: 2%;
+    margin-left: 5%;
+}
+
+input[type="submit"]
+{
+    width:40%;
+    margin-left: 25%;
+    color:white;
+    background-color: blue;
+}
+table{
+    border: 2px solid blue;
+}
+
+tr:nth-child(2n+1)
+{
+
+    background-color: lightblue;
+}
+
+input[type="checkbox"]
+{
+    width:20%;
+    margin-left: -8%;
+    margin-top: 5%;
+
+}
+
+select
+{
+    width:40%;
+    margin-bottom: 2%;
+    margin-left: 2%;
+}

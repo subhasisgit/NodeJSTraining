@@ -1,0 +1,28 @@
+package com.anz.travel.controller;
+
+import org.hibernate.loader.custom.Return;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.anz.travel.repo.FlightRepository;
+
+@Controller
+public class FlightController {
+	
+	@Autowired
+	private FlightRepository flightRepository;
+	
+	@RequestMapping("/index")
+	public String loadHome(Model model)
+	{
+		model.addAttribute("flightList",flightRepository.findAll());
+		return "home";
+	}
+	
+	public String createFlightData()
+	{
+		return "redirect:home";
+	}
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	
+<bean id="ds" class="com.anz.banking.models.DataSource">
+<constructor-arg index="0" value="http://localhost"></constructor-arg>
+<constructor-arg index="1" value="root"></constructor-arg>
+<constructor-arg index="2" value="viki"></constructor-arg>
+<constructor-arg index="3" value="bankingdb"></constructor-arg>
+<constructor-arg index="4" value="3306"></constructor-arg>
+</bean>
+	
+<bean id="sf" class="com.anz.banking.models.SessionFactory">
+<property name="id" value="439569"></property>
+<property name="duration" value="30"></property>
+<property name="cached" value="true"></property>
+<property name="dataSource"  ref="ds"></property>
+</bean>
+	
+</beans>

@@ -1,0 +1,5 @@
+package com.anz.travel.models;
+
+public class Flight {
+
+}
